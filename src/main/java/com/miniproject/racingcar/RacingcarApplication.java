@@ -1,5 +1,6 @@
 package com.miniproject.racingcar;
 
+import com.miniproject.racingcar.controller.GameManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RacingcarApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RacingcarApplication.class, args);
+		try {
+			GameManager.start();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+//		SpringApplication.run(RacingcarApplication.class, args);
 	}
 
 }

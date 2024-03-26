@@ -1,7 +1,5 @@
 package com.miniproject.racingcar.ui;
 
-import com.miniproject.racingcar.exception.InputException;
-
 import java.util.Scanner;
 
 public class Input {
@@ -23,14 +21,14 @@ public class Input {
 
     private static void checkingCountValidation(String user) {
         if (user.length() > 5) {
-            InputException.wrongInput();
+            throw new IllegalArgumentException("[ERROR] 잘못된 입력값");
         }
     }
 
     public static int inputGameCount() {
         String input = getSC().nextLine();
         if (!checkingCount(input)) {
-            InputException.wrongInput();
+            throw new IllegalArgumentException("[ERROR] 잘못된 입력값");
         }
 
         return Integer.parseInt(input);
@@ -41,8 +39,7 @@ public class Input {
             Integer.parseInt(cnt);
             return true;
         } catch (NumberFormatException e) {
-            InputException.wrongInput();
+            throw new IllegalArgumentException("[ERROR] 잘못된 입력값");
         }
-        return false;
     }
 }
