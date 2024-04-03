@@ -1,4 +1,4 @@
-package com.miniproject.connection;
+package com.miniproject.racingcar.connection;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static com.miniproject.connection.ConnectionConst.*;
+import static com.miniproject.racingcar.connection.ConnectionConst.*;
 
 @Slf4j
 public class DBConnectionUtil {

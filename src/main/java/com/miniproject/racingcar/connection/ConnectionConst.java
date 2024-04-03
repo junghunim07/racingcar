@@ -1,4 +1,4 @@
-package com.miniproject.connection;
+package com.miniproject.racingcar.connection;
 
 public class ConnectionConst {
 
