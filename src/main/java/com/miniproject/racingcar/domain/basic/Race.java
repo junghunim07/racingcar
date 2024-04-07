@@ -1,6 +1,6 @@
-package com.miniproject.racingcar.domain;
+package com.miniproject.racingcar.domain.basic;
 
-import com.miniproject.racingcar.service.RaceService;
+import com.miniproject.racingcar.service.basic.RaceService;
 import com.miniproject.racingcar.ui.ResultMapper;
 
 import java.util.ArrayList;

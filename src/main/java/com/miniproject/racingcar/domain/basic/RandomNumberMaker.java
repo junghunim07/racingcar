@@ -1,4 +1,4 @@
-package com.miniproject.racingcar.domain;
+package com.miniproject.racingcar.domain.basic;
 
 public class RandomNumberMaker {
 

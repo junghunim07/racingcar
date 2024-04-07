@@ -1,6 +1,6 @@
-package com.miniproject.racingcar.service;
+package com.miniproject.racingcar.service.basic;
 
-import com.miniproject.racingcar.domain.RandomNumberMaker;
+import com.miniproject.racingcar.domain.basic.RandomNumberMaker;
 
 public class RaceService {
 
