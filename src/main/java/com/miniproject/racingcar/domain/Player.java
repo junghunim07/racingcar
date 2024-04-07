@@ -1,57 +1,36 @@
 package com.miniproject.racingcar.domain;
 
+import lombok.Getter;
+
+@Getter
 public class Player {
 
-    private final Car car;
-    private int totalMatch;
-    private int victoryMatch;
-    private int lossMatch;
+    private String name;
+    private int total;
+    private int victory;
+    private int defeat;
     private int point;
 
     public Player(String name) {
-        car = makeCar(name);
-        totalMatch = 0;
-        victoryMatch = 0;
-        lossMatch = 0;
-        point = 0;
+        this.name = name;
     }
 
-    public int moveCar() {
-        return car.movingForward();
-    }
-
-    public int stopCar() {
-        return car.movingStop();
+    public Player(String name, int total, int victory, int defeat, int point) {
+        this.name = name;
+        this.total = total;
+        this.victory = victory;
+        this.defeat = defeat;
+        this.point = point;
     }
 
     public void win() {
-        if (checkingMatchCount()) {
-            totalMatch++;
-            victoryMatch++;
-            point += 20;
-        }
+        total += 1;
+        victory += 1;
+        point += 20;
     }
 
-    public void loss() {
-        if (checkingMatchCount()) {
-            totalMatch++;
-            lossMatch++;
-        }
-    }
-
-    @Override
-    public String toString() {
-        return car.getCarName();
-    }
-
-    private boolean checkingMatchCount() {
-        if (totalMatch == victoryMatch + lossMatch) {
-            return true;
-        }
-        return false;
-    }
-
-    private Car makeCar(String name) {
-        return new Car(name);
+    public void lose() {
+        total += 1;
+        defeat += 1;
     }
 }

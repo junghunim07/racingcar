@@ -1,23 +1,13 @@
 package com.miniproject.racingcar.controller;
 
-import com.miniproject.racingcar.domain.Race;
-import com.miniproject.racingcar.ui.Input;
-import com.miniproject.racingcar.ui.Output;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
+@Controller
 public class GameManager {
 
-    public static void start() {
-        Race race = new Race(userList(), gameCount());
-        race.match();
-    }
-
-    private static int gameCount() {
-        Output.receiveGameCount();
-        return Input.inputGameCount();
-    }
-
-    private static String[] userList() {
-        Output.receiveUserName();
-        return Input.inputUserName();
+    @GetMapping("/")
+    public String home() {
+        return "home";
     }
 }

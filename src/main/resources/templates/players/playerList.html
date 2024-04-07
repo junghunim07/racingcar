@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>이름</th>
+                <th>총 경기</th>
+                <th>victory</th>
+                <th>lose</th>
+                <th>point</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="player : ${players}">
+                <td th:text="${player.name}"></td>
+                <td th:text="${player.total}"></td>
+                <td th:text="${player.victory}"></td>
+                <td th:text="${player.defeat}"></td>
+                <td th:text="${player.point}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
